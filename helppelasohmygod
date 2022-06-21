@@ -1,0 +1,50 @@
+## the goal of this code is to estimate the amount of water in a barrel based on previous measurements, taken from 0-4 gallons
+## the original measurements were taken from an ultrasonic sensor set up like this : https://www.researchgate.net/figure/The-HC-SR04-sensor-used-to-measure-the-water-level_fig4_339286117
+## it can interpolate fine but my problem is just inserting existing data into the new dataframe that contains every possible measurement, 50.0-100.0 cm
+import pandas as pd
+import numpy as np
+
+
+data = {
+    0.5 : 100.0,
+    1 : 99.7,
+    2 : 85.0 ,
+    3 : 70.0 ,
+    4 : 50.0 ,
+}
+
+low = 50.0
+high = 100.5
+data2 = pd.DataFrame(list(data.items()), columns = ['gals', 'distance'])
+theRay = np.arange(low, high , 0.1)
+df = pd.DataFrame(theRay, columns =['distance'])
+df['gals'] = np.nan
+
+print(data2)
+
+# data2 has the measured ones
+
+for z in range(len(data2)):
+    currNum = data2.distance[z]
+    currGal = data2.gals[z]
+    print(currNum)
+    print(currGal)
+    
+    ## attempt 1
+    df['gals'] = np.where(df['distance'] == currNum, currGal, df['gals'])
+    
+    ## attempt 2
+#     condition = (df['distance'] == currNum)
+#     df.loc[condition, 'gals'] = currGal
+
+    ## attempt 3
+    
+#     df.loc[df['distance'] == currNum, 'gals'] = currGal
+
+
+# i am going to kms this is so simple but the loop only inserts the first row, 50.0 = 0.4 gallons, idk  what is happening
+print(df.info())
+print(df)
+
+# df = df.gals.interpolate()
+# the last part is interpolating
