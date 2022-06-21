@@ -2,6 +2,8 @@
 ## the original measurements were taken from an ultrasonic sensor set up like this :
 # https://www.researchgate.net/figure/The-HC-SR04-sensor-used-to-measure-the-water-level_fig4_339286117
 ## it can interpolate fine but my problem is just inserting existing data (with only four measurements) into the new dataframe that contains every possible measurement, 50.0-100.0 cm
+
+## end goal: have df with 4 non-nan values in column 'gals'
 import pandas as pd
 import numpy as np
 
