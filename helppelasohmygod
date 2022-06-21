@@ -1,6 +1,7 @@
-## the goal of this code is to estimate the amount of water in a barrel based on previous measurements, taken from 0-4 gallons
-## the original measurements were taken from an ultrasonic sensor set up like this : https://www.researchgate.net/figure/The-HC-SR04-sensor-used-to-measure-the-water-level_fig4_339286117
-## it can interpolate fine but my problem is just inserting existing data into the new dataframe that contains every possible measurement, 50.0-100.0 cm
+## the goal of this code is to estimate the amount of water in a barrel based on previous measurements, taken from 0.5-4 gallons
+## the original measurements were taken from an ultrasonic sensor set up like this :
+# https://www.researchgate.net/figure/The-HC-SR04-sensor-used-to-measure-the-water-level_fig4_339286117
+## it can interpolate fine but my problem is just inserting existing data (with only four measurements) into the new dataframe that contains every possible measurement, 50.0-100.0 cm
 import pandas as pd
 import numpy as np
 
