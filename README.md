@@ -1,5 +1,4 @@
-- 👋 hello, i’m @pigeonenthusiast (kai)
-- 👀 i’m interested in anything science related :)
-- 🌱 i’m currently learning python and raspberry pi
-- 📫 my email is elianajuarez0523@gmail.com
-
+- 🐦 hi, i’m @pigeonenthusiast (eliana kai juarez)
+- 👀 i’m interested in air pollution and remote sensing (:
+- 🌱 i’m currently studying earth, atmospheric, and planetary science at mit
+- 📫 my email is juarez@mit.edu
